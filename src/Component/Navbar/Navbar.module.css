@@ -1,0 +1,19 @@
+.wrapperButton{
+    display: flex;
+    padding: 40px;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 150px;
+}
+.wrapper{
+    background: #D7FFFE;
+    border-radius: 30px;
+}
+.item{
+    width: 100px;
+    margin: 20px 0;
+    border: none;
+    border-radius: 20px;
+    height: 30px;
+    background: #B8C47F;
+}

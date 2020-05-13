@@ -6,8 +6,11 @@ export const People = React.memo(({people,...props})=>{
         <div className={s.wrapper}>
             {people.map(p=>{
                 return <div className={s.wrapperPerson}>
-                    <div className={s.name}>Name: {p.name}</div>
-                    <div className={s.hair_color}>Hair's color: {p.hair_color}</div>
+                    <div className={s.wrapperData}>
+                        <div className={s.name}>Name: {p.name}</div>
+                        <div className={s.hair_color}>Hair's color: {p.hair_color}</div>
+                        <div className={s.height}>Height: {p.height}</div>
+                    </div>
                 </div>
             })}
         </div>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { getPeopleThunk } from '../../redux/people'
 import { getPeople, getFetching } from '../../Selectors/Selectors'
-import { People } from './People'
+import  People  from './People'
 import { compose } from 'redux'
 import { connect } from 'react-redux'
 import Preloader from '../Common/Preloader/Preloader'
@@ -11,12 +11,10 @@ class PeopleContainer extends React.Component {
         this.props.getPeopleThunk()
     }
     render(){
-        if( this.props.isFetching){
-            return <Preloader/>
-        }
-        else{
-            return <People {...this.props}/>
-        }
+        return (
+            !!this.props.isFetching?<Preloader/>
+            :<People {...this.props}/>
+        )
     }
 }
 

@@ -27,7 +27,7 @@ const setFetching = (isFetching)=>({type:IS_FETCHING,isFetching})
 export const getPeopleThunk = (people)=>{
     return async dispatch=>{
         dispatch(setFetching(true))
-        let response = await PeopleAPI.getPeople()
+        let response = await PeopleAPI
         if(response.status ===200){
             dispatch(setPeople(response.data.results))
             dispatch(setFetching(false))

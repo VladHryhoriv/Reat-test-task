@@ -1,12 +1,9 @@
 import * as axios from 'axios'
 
-const instance = axios.create({
-    baseURL:'https://swapi.dev/',
-    headers:{}
-})
-
-export const PeopleAPI = {
-     getPeople(){
-        return instance.get('api/people/')
-    }
-}
+export const PeopleAPI = axios.get('https://swapi.dev/api/people/')
+  .then(response => {
+    return response;
+  })
+  .catch(error => {
+    return error;
+  })

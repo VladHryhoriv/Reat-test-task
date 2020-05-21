@@ -1,8 +1,7 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { NavLink } from 'react-router-dom'
 
-export const Second = React.memo((props)=>{
-    return <div>
-        <NavLink to='/third'><button>THIRD</button></NavLink>
-    </div>
-})
+const Second = (props)=><div><NavLink to='/third'><button>THIRD</button></NavLink></div>
+
+
+export default memo(Second)

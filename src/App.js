@@ -3,8 +3,8 @@ import './App.css';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import PeopleContainer from './Component/FirstPage/PeopleContainer';
 import { Navbar } from './Component/Navbar/Navbar';
-import { Second } from './Component/SecondPage/SecondPage';
-import { Third } from './Component/ThirdPage/Third';
+import  Second  from './Component/SecondPage/SecondPage';
+import  Third  from './Component/ThirdPage/Third';
 
 function App() {
   return (

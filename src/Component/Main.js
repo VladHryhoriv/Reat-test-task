@@ -1,8 +1,8 @@
 import React, { memo } from 'react';
 import styled from 'styled-components';
-import Header from '../Header/Header';
-import Contain from '../Contain/Contain';
-import Footer from '../Footer/Footer';
+import Header from './Header/Header';
+import Contain from './Contain/Contain';
+import Footer from './Footer/Footer';
 
 const AppWrapper = styled.div`
     margin:0 auto;
@@ -13,7 +13,7 @@ const AppWrapper = styled.div`
     flex-direction: column;
 `;
 
-const Main = props => {
+const Main = (props) => {
     return (
         <AppWrapper>
             <Header />

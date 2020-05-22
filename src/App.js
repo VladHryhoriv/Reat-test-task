@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import Main from './Component/Main/Main';
+import Main from './Component/Main';
 import { PeopleAPI } from './api/api';
 
 const App = () => {

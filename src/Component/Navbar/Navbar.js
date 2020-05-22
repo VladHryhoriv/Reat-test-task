@@ -1,29 +1,26 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
 const Button = styled.button`
-    width: 100px;
-    margin: 20px 0;
     border: none;
     border-radius: 20px;
-    height: 30px;
-    background: #B8C47F;
+    background: white;
+    font-size: 18px;
+    padding: 5%;
+    cursor: pointer;
 `;
 const Wrapper = styled.div`
-    background: #D7FFFE;
-    border-radius: 30px;
+    width:100%;
 `;
 
 const WrapperButton = styled.div`
     display: flex;
-    padding: 40px;
-    flex-wrap: wrap;
     align-items: center;
-    max-width: 150px;
+    justify-content:space-around;
 `;
 
-export const Navbar =React.memo((props)=>{
+const Navbar = (props) => {
     return (
         <Wrapper>
             <WrapperButton>
@@ -33,4 +30,6 @@ export const Navbar =React.memo((props)=>{
             </WrapperButton>
         </Wrapper>
     )
-}) 
+}
+
+export default memo(Navbar)

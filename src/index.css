@@ -6,15 +6,17 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+html , body, #root {
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+html{
+  background-image:url(./Photos/background.jpg);
+  background-size: 100% ;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-.app-wrapper{
-    display: flex;
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-    padding-top: 20px;
 }

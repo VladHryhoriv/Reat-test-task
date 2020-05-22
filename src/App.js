@@ -1,24 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
-import { Switch, Route, Redirect } from 'react-router-dom';
-import PeopleContainer from './Component/FirstPage/PeopleContainer';
-import { Navbar } from './Component/Navbar/Navbar';
-import  Second  from './Component/SecondPage/SecondPage';
-import  Third  from './Component/ThirdPage/Third';
+import Main from './Component/Main/Main';
+import { PeopleAPI } from './api/api';
 
-function App() {
-  return (
-    <div className="app-wrapper">
-      <Navbar/>
-      <Switch>
-            <Route path='/people' render={()=><PeopleContainer/>}/>
-            <Route path='/second' render={()=><Second/>}/>
-            <Route path='/third' render={()=><Third/>}/>
-            <Route path='*' redact={() => <div>404 NOT FOUND</div>} />
-            <Redirect from='/' to='/people' />
-      </Switch>
-    </div>
-  );
+const App = () => {
+  const [people, setPeople] = useState(null);
+  const [isFetching, setFetching] = useState(true)
+  useEffect(() => {
+    let api = async () => {
+      let response = await PeopleAPI
+      if (response.status === 200) {
+        setPeople(response.data.results)
+        setFetching(false)
+      }
+    }
+    api();
+  }, [people])
+  return <Main people={people} isFetching={isFetching} />
 }
 
 export default App;

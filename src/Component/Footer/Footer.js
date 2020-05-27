@@ -6,12 +6,12 @@ const FooterWrapper = styled.footer`
 	flex-direction: column;
 	justify-content: top;
 	background: #454545;
-	flex: 1 0 auto;
+	flex: 0 0 auto;
 	align-items: center;
 	padding: 1.5% 0;
 `;
 
-const Footer = props => (<FooterWrapper>About us</FooterWrapper>);
+const Footer = props => <FooterWrapper>About us</FooterWrapper>
 
 
 export default Footer;

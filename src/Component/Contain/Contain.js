@@ -5,18 +5,19 @@ import PeopleContainer from '../FirstPage/PeopleContainer';
 import SecondPage from '../SecondPage/SecondPage';
 import Third from '../ThirdPage/Third';
 
-const ContainWrap = styled.main`
+const MainContain = styled.div`
+    flex: 1 0 auto;
 `;
 
 const Contain = props => {
     return (
-        <ContainWrap>
+        <MainContain>
             <Route path='/people' render={() => <PeopleContainer {...props} />} />
             <Route path='/second' render={() => <SecondPage />} />
             <Route path='/third' render={() => <Third />} />
             <Route path='*' redact={() => <div>404 NOT FOUND</div>} />
             <Redirect from='/' to='/people' />
-        </ContainWrap>
+        </MainContain>
     );
 };
 

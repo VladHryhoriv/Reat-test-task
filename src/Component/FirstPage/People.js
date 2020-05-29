@@ -1,5 +1,6 @@
 import React, { memo } from 'react'
 import styled from 'styled-components'
+import { useTranslation } from 'react-i18next';
 
 const Wrapper = styled.div`
     width: 100%;
@@ -32,15 +33,16 @@ const BoldText = styled.span`
 `;
 
 const People = ({ people, ...props }) => {
+    const { t } = useTranslation();
     return (
         <Wrapper>
             {people.map((peopleItem, index) => {
                 return <WrapperPerson key={index}>
                     <WrapperData>
-                        <div><BoldText>Name:</BoldText> {peopleItem.name}</div>
-                        <div><BoldText>Hair's color:</BoldText> {peopleItem.hair_color}</div>
-                        <div><BoldText>Height:</BoldText> {peopleItem.height}</div>
-                        <div><BoldText>Gender :</BoldText>{peopleItem.gender}</div>
+                        <div><BoldText>{t('Name')} </BoldText> {peopleItem.name}</div>
+                        <div><BoldText>{t('HairColor')} </BoldText> {peopleItem.hair_color}</div>
+                        <div><BoldText>{t('Height')}</BoldText> {peopleItem.height}</div>
+                        <div><BoldText>{t('Gender')}</BoldText>{peopleItem.gender}</div>
                     </WrapperData>
                 </WrapperPerson>
             })}

@@ -1,6 +1,7 @@
 import React, { memo } from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
+import { useTranslation } from 'react-i18next';
 
 const Button = styled.button`
     border: none;
@@ -21,12 +22,13 @@ const WrapperButton = styled.div`
 `;
 
 const Navbar = (props) => {
+    const { t } = useTranslation();
     return (
         <Wrapper>
             <WrapperButton>
-                <NavLink to='/people' ><Button>People</Button></NavLink>
-                <NavLink to='/second' ><Button>SecondPage</Button></NavLink>
-                <NavLink to='/third' ><Button>ThirdPage</Button></NavLink>
+                <NavLink to='/people' ><Button>{t('Users')}</Button></NavLink>
+                <NavLink to='/second' ><Button>{t('Second')}</Button></NavLink>
+                <NavLink to='/third' ><Button>{t('Third')}</Button></NavLink>
             </WrapperButton>
         </Wrapper>
     )

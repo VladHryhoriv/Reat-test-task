@@ -34,7 +34,7 @@ const Main = (props) => {
     return (
         <AppWrapper>
             <Header />
-            <Contain people={people} isFetching={isFetching} />
+            <Contain people={people} isFetching={isFetching}/>
             <Footer />
         </AppWrapper>
     );

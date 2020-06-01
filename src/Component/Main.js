@@ -20,6 +20,7 @@ const Main = (props) => {
     const [isFetching, setFetching] = useState(true)
     useEffect(() => {
         let api = async () => {
+            setFetching(true);
             await PeopleAPI
             .then(response => {
                 setPeople(response.data.results)

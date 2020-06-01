@@ -27,10 +27,10 @@ const Contain = (props) => {
             <div>
                 <Language onChange={(e)=>{
                     handleClick(e.target.value)
-                }}>
+                }} defaultValue="en">
                     <option value='ru' onClick={handleClick('ru')}>RU</option>
                     <option value='uk' onClick={handleClick('uk')}>UK</option>
-                    <option value='en' selected="selected" onClick={handleClick('en')}>EN</option>
+                    <option value='en' onClick={handleClick('en')}>EN</option>
                 </Language>
             </div>
             <Route path='/people' render={() => <PeopleContainer {...props} />} />
